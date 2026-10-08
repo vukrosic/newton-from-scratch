@@ -1,0 +1,23 @@
+{
+  "apex_angle_deg": 60.0,
+  "common_incidence_deg": 50.0,
+  "note": "illustrative chosen indices, not historical glass data",
+  "rays": {
+    "red": {
+      "refractive_index": 1.51,
+      "entry_angle_deg": 50.0,
+      "inside_angle_deg": 30.485095020127428,
+      "exit_angle_deg": 48.06482731407565,
+      "deviation_deg": 38.06482731407566,
+      "minimum_deviation_bonus_deg": 38.050739541109344
+    },
+    "violet": {
+      "refractive_index": 1.53,
+      "entry_angle_deg": 50.0,
+      "inside_angle_deg": 30.045173554473912,
+      "exit_angle_deg": 49.81412079872387,
+      "deviation_deg": 39.81412079872388,
+      "minimum_deviation_bonus_deg": 39.81398402974046
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "impulse_on_a": 6.0,
+  "impulse_on_b": -6.0,
+  "before_momentum": {
+    "a": 0.0,
+    "b": 0.0
+  },
+  "after_momentum": {
+    "a": 6.0,
+    "b": -6.0
+  },
+  "delta_momentum": {
+    "a": 6.0,
+    "b": -6.0
+  },
+  "total_momentum": 0.0
+}

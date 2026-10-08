@@ -1,0 +1,31 @@
+{
+  "function": "x=t^2",
+  "t": 3,
+  "exact_slope": 6.0,
+  "finite_difference_slopes": {
+    "1.0": 7.0,
+    "0.1": 6.100000000000012,
+    "0.01": 6.009999999999849
+  },
+  "integral_v_0_to_3": {
+    "3": {
+      "left": 6.0,
+      "right": 12.0,
+      "midpoint": 9.0,
+      "midpoint_error": 0.0
+    },
+    "30": {
+      "left": 8.700000000000001,
+      "right": 9.3,
+      "midpoint": 9.000000000000002,
+      "midpoint_error": 1.7763568394002505e-15
+    },
+    "300": {
+      "left": 8.97,
+      "right": 9.030000000000001,
+      "midpoint": 9.0,
+      "midpoint_error": 0.0
+    }
+  },
+  "exact_displacement": 9.0
+}

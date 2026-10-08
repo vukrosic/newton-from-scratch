@@ -1,0 +1,10 @@
+{
+  "G": 6.6743e-11,
+  "earth_radius_m": 6371000.0,
+  "earth_mu_m3_s2": 398600441800000.0,
+  "moon_orbit_distance_m": 384400000.0,
+  "earth_surface_acceleration_m_s2": 9.820250487063928,
+  "moon_orbit_acceleration_m_s2": 0.002697559407149377,
+  "moon_orbit_speed_m_s": 1018.3034106336975,
+  "moon_orbit_period_days": 27.45189357205398
+}

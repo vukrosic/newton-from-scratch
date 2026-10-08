@@ -1,0 +1,22 @@
+{
+  "status": "ok",
+  "tests": "passed"
+}
+Newton demos: all numerical tests passed
+10 s push: m1 100.100 m, m2 50.050 m (analytic 100, 50)
+Coasting: 20.000 m at 2.000 m/s; pulse final speed: 4.000 m/s
+Wrong force-as-speed endpoint: 4.000 m; fixed pulse: 36.020 m
+Slope h=.01: 6.01000; integral midpoint n=300: 9.00000
+Earth surface g: 9.820250 m/s^2
+Moon orbit: 1.018 km/s, 27.452 days
+Circular speed at 300 km: 7.730 km/s
+3000 m/s -> earth_contact, radius 6368.6..6671.0 km
+6000 m/s -> earth_contact, radius 6370.7..6671.0 km
+7729.89 m/s -> circular, radius 6671.0..6671.0 km
+10000 m/s -> elliptical, radius 6671.0..32622.1 km
+12000 m/s -> escape, radius 6671.0..73614.0 km
+Cold radial fall: earth_contact
+Euler circular energy drift: 0.292; Verlet: 5.14e-12
+Prism red: 38.065 deg deviation at 50 deg incidence
+Prism violet: 39.814 deg deviation at 50 deg incidence
+Newton sqrt(2): 1.414213562373095
