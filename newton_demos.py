@@ -105,10 +105,11 @@ def gravity():
             "moon_orbit_speed_m_s": speed,
             "moon_orbit_period_days": period / 86400}
 
-def orbit(speed0, dt=2.0, verlet=True, sample_every=None):
+def orbit(speed0, dt=2.0, verlet=True, sample_every=None,
+          start_radius=None):
     if sample_every is None:
         sample_every = 5 if dt == 2.0 else 1
-    r0 = R_EARTH + 300_000.0
+    r0 = start_radius or (R_EARTH + 300_000.0)
     period = 2 * math.pi * math.sqrt(r0**3 / MU_EARTH)
     limit = 2 * period
     x, y, vx, vy = r0, 0.0, 0.0, speed0
@@ -215,7 +216,10 @@ def make_all():
     data = {"inertial_force": inertial_force(),
             "impulse_pair": impulse_pair(),
             "calculus": calculus(), "gravity": gravity(), "orbits": orbits(),
-            "prism": prism(), "newton_root": newton_root()}
+            "prism": prism(), "newton_root": newton_root(),
+            "moon_orbit": orbit(math.sqrt(MU_EARTH / R_MOON),
+                                dt=120.0, sample_every=30,
+                                start_radius=R_MOON)}
     for name, value in data.items():
         path = RUNS / (name + ".json")
         path.write_text(json.dumps(value, indent=2) + "\n")
@@ -223,6 +227,8 @@ def make_all():
     return data
 
 def tests(data):
+    moon = data["moon_orbit"]
+    assert moon["max_radius_m"] - moon["min_radius_m"] < 1000
     motion = data["inertial_force"]
     assert motion["duration_s"] == 10.0
     assert abs(motion["masses"]["1"]["x_final"] - 100.1) < 1e-9
